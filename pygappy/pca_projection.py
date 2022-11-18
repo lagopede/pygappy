@@ -431,7 +431,7 @@ def normgappy(data, error, espec, mean, cov=False, \
 
             rreconstruct = np.sum((pcs[j, :] * espec[:, bad_pix].T).T, 0)
             rreconstruct += mean[bad_pix]
-            data[j, bad_pix] = reconstruct
+            data[j, bad_pix] = rreconstruct
 
     if ngal == 1:
         pcs = pcs[0]
